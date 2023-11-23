@@ -1,5 +1,7 @@
 migrations
 .envrc
 .env.sample
+.env.dev
 .gitignore
 *.md
+docker-compose.yml
