@@ -9,7 +9,8 @@ from flask_migrate import Migrate
 db = SQLAlchemy()
 ma = Marshmallow()
 
-db_uri = f'postgresql://{os.environ.get("POSTGRES_USERNAME")}:{os.environ.get("PASSWORD")}@{os.environ.get("HOST")}/{os.environ.get("DB_NAME")}'
+db_uri = os.environ.get("DB_URL")
+
 def create_app(db_uri=db_uri):
     """Construct the core application."""
     app = Flask(__name__)
